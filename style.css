@@ -1,0 +1,235 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: poppins,sans-serif;
+    text-decoration: none;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.background{
+    width:100%;
+    height: 100%;
+    min-height: 100vh;
+    background:  rgb(214, 201, 182);
+}
+
+.wrapper{
+    width:1280px;
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header{
+    padding: 40px 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.logo-text{
+    font-size: 24px;
+    font-weight: 500;
+    color:rgb(101, 85, 62);
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: bold;
+}
+
+
+.logo-text:hover{
+    cursor: pointer;
+    color: rgb(38, 34, 34);
+    transform: scale(1.05) translateY(-2px);
+}
+
+nav .togglebtn{
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top:45px;
+    right: 3%;
+    z-index: 5;
+    cursor: pointer;
+    display: none;
+}
+
+nav .navlinks{
+    list-style-type: none;
+}
+nav .navlinks li{
+    display: inline-block;
+}
+nav .navlinks li a{
+     color:rgb(133, 117, 95);
+     font-weight: 500;
+     margin-right: 2.5rem;
+     transform: scale(1.05) translateY(-2px)
+}
+
+nav .navlinks li a:hover{
+    color: rgb(38, 34, 34);
+    
+
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top:4rem;
+}
+.container .my-pic{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 15px solid #444;
+    box-shadow: 5px 7px 25px rgba(0,0,0,0.5);
+}
+.my-pic img{
+    height: 100%;
+    width:100%;
+    transition: 0.5s;
+}
+.my-pic img:hover{
+    transform: scale(1.2);
+}
+.text{
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+.text h5{
+    color:rgb(111, 103, 91);
+    font-size: 14px;
+}
+.text h5 span{
+    color:rgb(101, 85, 62);
+    font-size: 16px;
+}
+.text h1{
+    color: rgb(101, 85, 62);
+    font-size: 3rem;
+}
+.text p{
+    color:rgb(111, 103, 91);
+    font-family: "Nunito", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+
+}
+.btn-group{
+    margin:45px 0;
+    
+}
+
+.contactbtn ,.downloadbtn{
+    color:#fff;
+    background-color: rgb(101, 85, 62);
+    padding: 12px 25px;
+    margin: 5px 0px;
+    margin-right:7px;
+    border-radius: 30px;
+    border:2px solid #1c1515;
+    box-shadow:  0 10px 10px -8px rgb(0 0 0 / 78%);
+    box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.25);
+    transition: all .7s ease;
+}
+
+.contactbtn:hover{
+    background-color: rgba(0, 0, 0, 0.817);
+    color:rgb(133, 117, 95);
+    transform: scale(1) translateY(-5px);
+}
+
+.downloadbtn:hover{
+    background-color: rgba(0, 0, 0, 0.817);
+    color:rgb(133, 117, 95);
+    transform: scale(1) translateY(-5px);
+}
+
+.text .social i{
+    color: rgb(133, 117, 95);
+    font-size: 18px;
+    margin-right: 10px;
+    transition: 0.5s;
+}
+.text .social i:hover{
+    color:#1c1515;
+    transform: rotate(360deg);
+}
+
+/* displaying navbar for small screen */
+@media(max-width:930px)
+{
+    nav .togglebtn{
+        display: initial;
+    }
+    /* for toggle button**/
+    .click {
+        top:45px;
+    }
+    .click span{
+        position: absolute;
+        margin-top:12px
+    }
+    .click span:first-child{
+        transform: rotate(-40deg);
+    }
+    .click span:nth-child(2)
+    {
+        opacity: 0;
+        margin:0;
+    }
+    .click span:last-child{
+        transform: rotate(45deg);
+        top:0;
+    }
+    nav .navlinks{
+        position: absolute;
+        top:110px;
+        right:-100%;
+        bottom: 0;
+        width: 60%;
+        height: 100vh;
+        background-color: #222;
+        z-index: 3;
+        box-shadow: 5px 13px 30px rgba(0,0,0,0.1);
+        transition: 0.5s;
+        padding: 25px 0px;
+    }
+    nav .navlinks li{
+        display: block;
+    }
+    nav .navlinks li a{
+        display: block;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    nav .navlinks.open{
+        right:0;
+    }
+}
+@media(max-width:768px)
+{
+    .container{
+        flex-direction: column;
+        padding-top:2rem
+    }
+    
+    .my-text{
+        padding:40px 0px;
+    }
+}
